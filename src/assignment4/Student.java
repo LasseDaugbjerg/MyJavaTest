@@ -34,10 +34,9 @@ public class Student
     public Student(int studentId, String name)
     {
         //TODO Delete line below, and implement this method
-        throw new UnsupportedOperationException();
-    }
-
-
+}
+// den tester rigtigt, da jeg har forsøgt at lave den,
+// men blev ikke færdig og var nød til at fjerne før at den ville teste igen.
     /**
      *
      * @return the value of the instance field

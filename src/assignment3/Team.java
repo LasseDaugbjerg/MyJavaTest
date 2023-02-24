@@ -1,6 +1,7 @@
 package assignment3;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Team {
    private ArrayList<TeamMember> members = new ArrayList<>();
@@ -12,7 +13,8 @@ public class Team {
      */
     public void addTeamMember(TeamMember m) {
         //TODO Delete line below, and implement this method
-        throw new UnsupportedOperationException();
+        members.add(m);
+
     }
     
     // Nothing to do here!
@@ -32,7 +34,8 @@ public class Team {
      */
     public boolean removeTeamMember(TeamMember m){
         //TODO Delete line below, and implement this method
-        throw new UnsupportedOperationException();
+        members.remove(m);
+        return true;
     }
 
     /**
@@ -57,7 +60,13 @@ public class Team {
      */
     public ArrayList<TeamMember> retriveMembersByRole(String role) {
         //TODO Delete line below, and implement this method
-        throw new UnsupportedOperationException();
+        ArrayList<TeamMember> retrivedMembers = new ArrayList<>();
+        for (TeamMember m : members) {
+            if (m.getRole().equals(role)) {
+                retrivedMembers.add(m);
+            }
+        }
+        return retrivedMembers;
     }
 
     /**
@@ -68,6 +77,7 @@ public class Team {
         //TODO Delete line below, and implement this method
         throw new UnsupportedOperationException();
     }
+
 
     /**
      * Sort the TeamMember list in descending order by role
